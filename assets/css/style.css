@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600&display=swap");
+@font-face {
+  font-family: "Larish";
+  src: url("../font/Larish_Neue_Semibold.woff2");
+}
+/* ================================ 
+        GENERAL STYLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Work Sans", sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ================================ 
+        OVERALL STYLES
+================================ */
+header,
+section,
+footer {
+  padding: 0 8%;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.RSVP-button {
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 20px 50px;
+  border: 1px solid #fff;
+  transition: 0.5s ease;
+}
+
+.RSVP-button:hover {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  transition: 0.5s ease;
+}
+
+h1 {
+  font-size: 10rem;
+  font-family: Larish;
+  line-height: 0.8;
+}
+
+h2 {
+  font-size: 10rem;
+  font-family: Larish;
+}
+
+/* ================================ 
+        HEADER STYLES
+================================ */
+/******** Header Nav ********/
+/* ================================ 
+        MAIN STYLES
+================================ */
+/* ================================ 
+        FOOTER STYLES
+================================ */
+header {
+  color: #fff;
+  background-color: #000;
+}
+header .vertical-line {
+  display: inline-block;
+  width: 50%;
+  height: 20vh;
+  border-right: 1px solid grey;
+}
+header .title {
+  text-align: center;
+}
+header .title p:first-of-type {
+  margin: 8vh 0 5vh 0;
+}
+header .title h1:last-of-type {
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: #000;
+}
+header .title p:last-of-type {
+  margin: 3vh 0 20vh 0;
+}
+header .below-title {
+  padding-bottom: 20vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.opener {
+  color: #fff;
+  background-color: #000;
+  padding-right: 0;
+}
+.opener h2:first-of-type {
+  margin: 0 10% 0 0;
+}
+.opener h2 {
+  padding: 2vh 0;
+}
+.opener .below-opener {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20vh;
+}
+.opener .below-opener img {
+  width: 45%;
+}
+
+.shuffledpics {
+  position: relative;
+}
+.shuffledpics div {
+  width: 45%;
+  padding: 60vh 0 80vh 0;
+  margin-left: 30%;
+}
+.shuffledpics div h2 {
+  line-height: 1;
+}
+.shuffledpics div p {
+  width: 85%;
+}
+.shuffledpics > p {
+  width: 40%;
+  padding: 0 0 40vh 0;
+  margin-left: 30%;
+}
+.shuffledpics p {
+  line-height: 2;
+}
+.shuffledpics img {
+  position: absolute;
+}
+.shuffledpics .small-size {
+  width: 300px;
+}
+.shuffledpics .medium-size {
+  width: 350px;
+}
+.shuffledpics .large-size {
+  width: 500px;
+}
+.shuffledpics .one {
+  top: -10vh;
+  right: 10%;
+}
+.shuffledpics .two {
+  top: 30vh;
+  left: 5%;
+}
+.shuffledpics .three {
+  top: 90vh;
+  right: 0;
+}
+.shuffledpics .four {
+  top: 120vh;
+  left: 15%;
+}
+.shuffledpics .five {
+  top: 140vh;
+  right: 15%;
+}
+.shuffledpics .six {
+  bottom: 40vh;
+  left: 0;
+}
+.shuffledpics .seven {
+  bottom: -10vh;
+  right: 20%;
+}
+
+.articles article {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.articles article div {
+  width: 50%;
+}
+.articles article h2 {
+  width: 50%;
+  line-height: 1;
+  padding-top: 2vh;
+}
+.articles article div:last-of-type {
+  width: 45%;
+}
+.articles article div:last-of-type p:first-of-type {
+  font-family: Larish;
+  font-size: 2.8rem;
+  padding-bottom: 3vh;
+}
+.articles .bears {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateY(20vh);
+  position: relative;
+  z-index: 2;
+}
+.articles .bears .papabear {
+  width: 60%;
+}
+.articles .bears .smallerbear {
+  width: 34%;
+  transform: translate(-18%, 5vh);
+}
+.articles .inverted {
+  transform: scaleX(-1);
+  margin: 20vh 0 10vh 0;
+}
+
+.black {
+  color: #fff;
+  background-color: #000;
+  padding-top: 25vh;
+}
+
+.white {
+  color: #000;
+  background-color: #fff;
+  padding-top: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.white::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -140px;
+  right: -125px;
+  z-index: 1;
+  background: url("../img/cc-circle-2.png") center/cover no-repeat;
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+footer {
+  color: #fff;
+  background-color: #000;
+  padding-bottom: 5vh;
+  position: relative;
+  overflow: hidden;
+}
+footer .media-wrapper p:first-of-type {
+  padding: 10vh 0 5vh 0;
+}
+footer .media-wrapper p:nth-of-type(2) {
+  font-family: Larish;
+  font-size: 3.6rem;
+  width: 45%;
+}
+footer .RSVP-button {
+  display: inline-block;
+  margin: 3vh 0 20vh 0;
+}
+footer .footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-links .social-media img {
+  width: 24px;
+  margin-right: 10px;
+}
+footer .footer-links p:first-of-type {
+  margin: 3vh 0;
+}
+footer .footer-links .ngo-links {
+  margin-right: 10%;
+}
+footer .footer-links .ngo-links img {
+  width: 100px;
+}
+
+.animated-line {
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 30%;
+  transform: rotate(45deg);
+  white-space: nowrap;
+}
+.animated-line p {
+  animation: rollingtext 30s linear infinite;
+  color: black;
+  font-family: Larish;
+  font-size: 12rem;
+}
+.animated-line p .whiteYear {
+  -webkit-text-stroke: 1px #000;
+  -webkit-text-fill-color: #fff;
+}
+
+@keyframes rollingtext {
+  50% {
+    transform: translateX(-500%);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .below-opener {
+    flex-direction: column;
+  }
+  .below-opener div {
+    width: 100%;
+  }
+
+  .shuffledpics div,
+.shuffledpics > p {
+    margin-left: 0;
+    width: 100%;
+  }
+  .shuffledpics .four,
+.shuffledpics .five {
+    display: none;
+  }
+  .shuffledpics .six {
+    bottom: 80vh;
+  }
+
+  .articles article {
+    flex-direction: column;
+  }
+  .articles article div {
+    width: 100%;
+  }
+  .articles article div p {
+    width: 100%;
+  }
+  .articles article div:last-of-type {
+    width: 100%;
+    padding-top: 5vh;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  footer {
+    padding: 0;
+  }
+  footer .media-wrapper {
+    padding: 0 8%;
+  }
+  footer .media-wrapper p:last-of-type {
+    width: 100%;
+  }
+  footer .animated-line {
+    transform: rotate(0deg);
+    position: static;
+  }
+  footer .animated-line p {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .below-opener {
+    flex-direction: column;
+  }
+  .below-opener div {
+    width: 100%;
+  }
+
+  .shuffledpics div,
+.shuffledpics > p {
+    margin-left: 0;
+    width: 100%;
+  }
+  .shuffledpics .one,
+.shuffledpics .two,
+.shuffledpics .three,
+.shuffledpics .six,
+.shuffledpics .seven {
+    left: 5%;
+    right: 5%;
+    width: 300px;
+  }
+  .shuffledpics .four,
+.shuffledpics .five {
+    display: none;
+  }
+  .shuffledpics .six {
+    bottom: 80vh;
+    left: 5%;
+  }
+
+  .articles article {
+    flex-direction: column;
+  }
+  .articles article div {
+    width: 100%;
+  }
+  .articles article div p {
+    width: 100%;
+  }
+  .articles article div:last-of-type {
+    width: 100%;
+    padding-top: 5vh;
+  }
+  .articles .bears {
+    flex-direction: column;
+  }
+  .articles .bears .papabear,
+.articles .bears .smallerbear {
+    width: 100%;
+  }
+  .articles .bears .smallerbear {
+    transform: translateX(0);
+    margin-top: 5vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  footer {
+    padding: 0;
+  }
+  footer .media-wrapper {
+    padding: 0 8%;
+  }
+  footer .media-wrapper p:last-of-type {
+    width: 100%;
+  }
+  footer .animated-line {
+    transform: rotate(0deg);
+    position: static;
+  }
+  footer .animated-line p {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

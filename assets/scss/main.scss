@@ -1,0 +1,486 @@
+// sass --watch assets/scss/main.scss assets/css/style.css
+
+@import "_generals.scss";
+@import "_mixin.scss";
+@import "_variables.scss";
+
+header {
+    @include setbgcolor(black);
+
+    .vertical-line {
+        display: inline-block;
+        width: 50%;
+        height: 20vh;
+        border-right: 1px solid grey;
+    }
+
+    .title {
+        text-align: center;
+
+        p:first-of-type {
+            margin: 8vh 0 5vh 0;
+        }
+
+        h1:last-of-type {
+            -webkit-text-stroke: 1px $main-color;
+            -webkit-text-fill-color: $secondary-color;
+        }
+
+        p:last-of-type {
+            margin: 3vh 0 20vh 0;
+        }
+    }
+
+    .below-title {
+        padding-bottom: 20vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.opener {
+    @include setbgcolor(black);
+    padding-right: 0;
+
+    h2:first-of-type {
+        margin: 0 10% 0 0;
+    }
+
+    h2 {
+        padding: 2vh 0;
+    }
+
+    .below-opener {
+        @include flexit;
+        padding-bottom: 20vh;
+
+        img {
+            width: 45%;
+        }
+    }
+}
+
+.shuffledpics {
+    position: relative;
+
+    div {
+        width: 45%;
+        padding: 60vh 0 80vh 0;
+        margin-left: 30%;
+
+        h2 {
+            line-height: 1;
+        }
+
+        p {
+            width: 85%;
+        }
+    }
+
+    >p {
+        width: 40%;
+        padding: 0 0 40vh 0;
+        margin-left: 30%;
+    }
+
+    p {
+        line-height: 2;
+    }
+
+    // crazy shuffled pictures
+    img {
+        position: absolute;
+    }
+
+    .small-size {
+        width: 300px;
+    }
+
+    .medium-size {
+        width: 350px;
+    }
+
+    .large-size {
+        width: 500px;
+    }
+
+    // Positioning of shuffled pictures
+
+    .one {
+        top: -10vh;
+        right: 10%;
+    }
+
+    .two {
+        top: 30vh;
+        left: 5%;
+    }
+
+    .three {
+        top: 90vh;
+        right: 0;
+    }
+
+    .four {
+        top: 120vh;
+        left: 15%;
+    }
+
+    .five {
+        top: 140vh;
+        right: 15%;
+    }
+
+    .six {
+        bottom: 40vh;
+        left: 0;
+    }
+
+    .seven {
+        bottom: -10vh;
+        right: 20%;
+    }
+}
+
+.articles {
+    article {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        div {
+            width: 50%;
+        }
+
+        h2 {
+            width: 50%;
+            line-height: 1;
+            padding-top: 2vh;
+        }
+
+        div:last-of-type {
+            width: 45%;
+
+            p:first-of-type {
+                font-family: Larish;
+                font-size: $medium;
+                padding-bottom: 3vh;
+            }
+        }
+
+    }
+
+    .bears {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transform: translateY(20vh);
+        position: relative;
+        z-index: 2;
+
+        .papabear {
+            width: 60%;
+        }
+
+        .smallerbear {
+            width: 34%;
+            transform: translate(-18%, 5vh);
+        }
+    }
+
+    .inverted {
+        transform: scaleX(-1);
+        margin: 20vh 0 10vh 0;
+    }
+}
+
+.black {
+    @include setbgcolor(black);
+    padding-top: 25vh;
+}
+
+.white {
+    @include setbgcolor(white);
+    padding-top: 50vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.white::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -140px;
+    right: -125px;
+    z-index: 1;
+    background: url('../img/cc-circle-2.png') center/ cover no-repeat;
+    animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+footer {
+    @include setbgcolor(black);
+    padding-bottom: 5vh;
+    position: relative;
+    overflow: hidden;
+
+    .media-wrapper {
+        p:first-of-type {
+            padding: 10vh 0 5vh 0;
+        }
+
+        p:nth-of-type(2) {
+            font-family: Larish;
+            font-size: 3.6rem;
+            width: 45%;
+        }
+    }
+
+
+    .RSVP-button {
+        display: inline-block;
+        margin: 3vh 0 20vh 0;
+    }
+
+    .footer-links {
+        @include flexit;
+
+        .social-media img {
+            width: 24px;
+            margin-right: 10px;
+        }
+
+        p:first-of-type {
+            margin: 3vh 0;
+        }
+
+        .ngo-links {
+            margin-right: 10%;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}
+
+
+.animated-line {
+    display: inline-block;
+    background-color: $main-color;
+    position: absolute;
+
+    width: 100%;
+    top: 100px;
+
+    left: 30%;
+    transform: rotate(45deg);
+    white-space: nowrap;
+
+    p {
+        animation: rollingtext 30s linear infinite;
+        color: black;
+        font-family: Larish;
+        font-size: 12rem;
+
+        .whiteYear {
+            -webkit-text-stroke: 1px $secondary-color;
+            -webkit-text-fill-color: $main-color;
+        }
+    }
+}
+
+@keyframes rollingtext {
+    50% {
+        transform: translateX(-500%);
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .below-opener {
+        flex-direction: column;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    .shuffledpics {
+
+        div,
+        >p {
+            margin-left: 0;
+            width: 100%
+        }
+
+        .four,
+        .five {
+            display: none;
+        }
+
+        .six {
+            bottom: 80vh;
+        }
+    }
+
+    .articles {
+        article {
+            flex-direction: column;
+
+            div {
+                width: 100%;
+
+                p {
+                    width: 100%;
+                }
+            }
+
+            div:last-of-type {
+                width: 100%;
+                padding-top: 5vh,
+            }
+        }
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+
+    footer {
+        padding: 0;
+
+        .media-wrapper {
+            padding: 0 8%;
+
+            p:last-of-type {
+                width: 100%;
+            }
+        }
+
+        .animated-line {
+            transform: rotate(0deg);
+            position: static;
+
+            p {
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .below-opener {
+        flex-direction: column;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    .shuffledpics {
+
+        div,
+        >p {
+            margin-left: 0;
+            width: 100%
+        }
+
+        .one,
+        .two,
+        .three,
+        .six,
+        .seven {
+            left: 5%;
+            right: 5%;
+            width: 300px;
+        }
+
+        .four,
+        .five {
+            display: none;
+        }
+
+        .six {
+            bottom: 80vh;
+            left: 5%;
+        }
+    }
+
+    .articles {
+        article {
+            flex-direction: column;
+
+            div {
+                width: 100%;
+
+                p {
+                    width: 100%;
+                }
+            }
+
+            div:last-of-type {
+                width: 100%;
+                padding-top: 5vh,
+            }
+        }
+
+        .bears {
+            flex-direction: column;
+
+            .papabear,
+            .smallerbear {
+                width: 100%;
+            }
+
+            .smallerbear {
+                transform: translateX(0);
+                margin-top: 5vh;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    footer {
+        padding: 0;
+
+        .media-wrapper {
+            padding: 0 8%;
+
+            p:last-of-type {
+                width: 100%;
+            }
+        }
+
+        .animated-line {
+            transform: rotate(0deg);
+            position: static;
+
+            p {
+                font-size: 3rem;
+            }
+        }
+    }
+}

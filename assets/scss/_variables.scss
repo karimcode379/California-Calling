@@ -1,0 +1,9 @@
+$main-color: #fff;
+$secondary-color: #000;
+$small: 1.6rem;
+$medium: 2.8rem;
+$large: 10rem;
+
+@media only screen and (max-width: 768px) {
+    $large: 5rem;
+}

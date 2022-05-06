@@ -1,0 +1,17 @@
+@mixin flexit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin setbgcolor($background-color) {
+    @if $background-color==black {
+        color: $main-color;
+        background-color: $secondary-color;
+    }
+
+    @else {
+        color: $secondary-color;
+        background-color: $main-color;
+    }
+}
