@@ -4,6 +4,8 @@
 @import "_mixin.scss";
 @import "_variables.scss";
 
+// HERO SECTION
+
 header {
     @include setbgcolor(black);
 
@@ -39,6 +41,8 @@ header {
 
 }
 
+// OPENING BIGTEXT
+
 .opener {
     @include setbgcolor(black);
     padding-right: 0;
@@ -60,6 +64,8 @@ header {
         }
     }
 }
+
+// SHUFFLED PICTURES AREA
 
 .shuffledpics {
     position: relative;
@@ -88,10 +94,7 @@ header {
         line-height: 2;
     }
 
-    // crazy shuffled pictures
-    img {
-        position: absolute;
-    }
+    // SIZES OF SHUFFLED PICTURES
 
     .small-size {
         width: 300px;
@@ -105,7 +108,11 @@ header {
         width: 500px;
     }
 
-    // Positioning of shuffled pictures
+    // POSITIONING OF SHUFFLED PICUTRES
+
+    img {
+        position: absolute;
+    }
 
     .one {
         top: -10vh;
@@ -143,6 +150,8 @@ header {
     }
 }
 
+// ARTICLES SECTIONS
+
 .articles {
     article {
         display: flex;
@@ -170,6 +179,8 @@ header {
         }
 
     }
+
+    // OVERLAPPING DOUBLE-IMAGES
 
     .bears {
         display: flex;
@@ -207,6 +218,8 @@ header {
     overflow: hidden;
 }
 
+// ROTATING ANIMATION
+
 .white::before {
     content: "";
     display: inline-block;
@@ -237,11 +250,11 @@ footer {
     overflow: hidden;
 
     .media-wrapper {
-        p:first-of-type {
+        >p:first-of-type {
             padding: 10vh 0 5vh 0;
         }
 
-        p:nth-of-type(2) {
+        >p:nth-of-type(2) {
             font-family: Larish;
             font-size: 3.6rem;
             width: 45%;
@@ -276,6 +289,7 @@ footer {
     }
 }
 
+// ROLLING TEXT ANIMATION
 
 .animated-line {
     display: inline-block;
@@ -306,6 +320,20 @@ footer {
     50% {
         transform: translateX(-500%);
     }
+}
+
+// MOBILE VERSIONS
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .shuffledpics {
+
+        .three,
+        .four,
+        .six {
+            display: none;
+        }
+    }
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
