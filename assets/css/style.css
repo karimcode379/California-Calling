@@ -412,12 +412,15 @@ footer .footer-links .ngo-links img {
     right: 5%;
     width: 300px;
   }
+  .shuffledpics .three {
+    top: 100vh;
+  }
   .shuffledpics .four,
 .shuffledpics .five {
     display: none;
   }
   .shuffledpics .six {
-    bottom: 80vh;
+    bottom: 90vh;
     left: 5%;
   }
 
