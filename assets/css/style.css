@@ -481,5 +481,15 @@ footer .footer-links .ngo-links img {
     font-size: 3rem;
   }
 }
+@media only screen and (max-height: 576px) {
+  .shuffledpics .two,
+.shuffledpics .three,
+.shuffledpics .four,
+.shuffledpics .five,
+.shuffledpics .six,
+.shuffledpics .seven {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

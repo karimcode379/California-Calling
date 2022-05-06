@@ -516,3 +516,17 @@ footer {
         }
     }
 }
+
+@media only screen and (max-height: 576px) {
+    .shuffledpics {
+
+        .two,
+        .three,
+        .four,
+        .five,
+        .six,
+        .seven {
+            display: none;
+        }
+    }
+}
